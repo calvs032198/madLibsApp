@@ -1,3 +1,4 @@
+let sentences = Array.from(document.querySelectorAll(".paragraphs"));
 let userInputs = [
   "computer pioneer",
   "found herself working on a",
@@ -20,3 +21,7 @@ for (
   questionTotal--;
   console.log(userInputs);
 }
+
+sentences.map((item, index) => {
+  item.innerText = userInputs[index];
+});
