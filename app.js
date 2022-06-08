@@ -3,20 +3,20 @@ let userInputs = [
   "found herself working on a",
   'word got out that the team had "debugged the"  ',
 ];
-let questionArray = [];
-let questionTotal = 5;
-let questionCounter = 0;
+let questionArray = ["How are you", "What's your name", "Signup?"];
+let questionTotal = questionArray.length;
+let numberOfQuestions = questionArray.length;
 let questions = [];
-for (let i = 0; i < questionTotal; i++) {
-  questionCounter += 1;
-  questionArray.push(prompt("Enter A verb"));
-  questions.push(prompt("Enter A noun"));
+for (
+  let questionCounter = 0;
+  questionCounter < numberOfQuestions;
+  questionCounter++
+) {
+  userInputs.push(
+    prompt(
+      questionArray[questionCounter] + `... (${questionTotal} questions left)`
+    )
+  );
   questionTotal--;
+  console.log(userInputs);
 }
-
-console.log(questionArray);
-console.log(questionCounter);
-console.log(questionArray[questionCounter] + `(${questions} questions left)`);
-console.log(
-  questionArray[questionCounter] + `; (${questionTotal} questions left)`
-);
